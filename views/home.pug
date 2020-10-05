@@ -1,0 +1,8 @@
+extends layout.pug
+block content
+    if error
+        p= error
+    form(action='/upload' method='post' enctype='multipart/form-data')
+        lablel(for='picture') Choose picture to upload
+        input( id='picture' type='file' name='picture' accept="image/png, image/jpeg")
+        button Upload
