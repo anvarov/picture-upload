@@ -19,7 +19,7 @@ const putObject = (file) => {
         signatureVersion: 4,
     });
     
-    signed.addAuthorization({ accessKeyId:'AKIAQPETPWZH6TR27DE4', secretAccessKey: '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'}, date)
+    signed.addAuthorization({ accessKeyId:'put access key here', secretAccessKey: 'put secret key here'}, date)
     return fetch('https://82838jdzsc.execute-api.us-east-2.amazonaws.com/upload-picture', {...signed.request}).then( async (res) => {
         return await res.json();
     }).catch(err => {
